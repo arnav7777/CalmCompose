@@ -1,0 +1,18 @@
+# Windows OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MacOS OS files
+.DS_Store
+
+# Local configuration
+.env
+.local
+*.log
+
+# Editor backups
+*.swp
+*.bak
+.vscode/
+.idea/

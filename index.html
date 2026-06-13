@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CalmCompose - A Generative AI-powered Mental Wellness Tracker and Empathetic Companion for competitive exam students (JEE, NEET, UPSC, etc.).">
+  <title>CalmCompose | Student Mental Wellness & Digital Companion</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Chart.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <!-- App Container -->
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation (Desktop) -->
+    <aside class="app-sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">
+          <i data-lucide="brain-circuit" class="logo-icon"></i>
+        </div>
+        <span class="brand-name">CalmCompose</span>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-link active" data-page="dashboard" id="nav-btn-dashboard">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#journal" class="nav-link" data-page="journal" id="nav-btn-journal">
+          <i data-lucide="book-open"></i>
+          <span>Journal & Mood</span>
+        </a>
+        <a href="#companion" class="nav-link" data-page="companion" id="nav-btn-companion">
+          <i data-lucide="messages-square"></i>
+          <span>AI Companion</span>
+        </a>
+        <a href="#mindfulness" class="nav-link" data-page="mindfulness" id="nav-btn-mindfulness">
+          <i data-lucide="wind"></i>
+          <span>Mindfulness</span>
+        </a>
+        <a href="#planner" class="nav-link" data-page="planner" id="nav-btn-planner">
+          <i data-lucide="calendar-check"></i>
+          <span>Study Planner</span>
+        </a>
+        <a href="#settings" class="nav-link" data-page="settings" id="nav-btn-settings">
+          <i data-lucide="settings"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+      
+      <!-- Student Goal Badge -->
+      <div class="sidebar-footer">
+        <div class="user-badge-card">
+          <div class="user-badge-avatar">
+            <i data-lucide="sparkles" class="text-teal"></i>
+          </div>
+          <div class="user-badge-info">
+            <h4 class="user-badge-name" id="badge-user-name">Student</h4>
+            <p class="user-badge-exam" id="badge-exam-target">Target: JEE 2026</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div class="mobile-header-brand">
+        <i data-lucide="brain-circuit" class="text-teal"></i>
+        <span>CalmCompose</span>
+      </div>
+      <div class="mobile-header-badge" id="mobile-badge-exam">JEE 2026</div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-main-content">
+      
+      <!-- Page: Dashboard -->
+      <section id="page-dashboard" class="app-page active">
+        <!-- Rendered by dashboard.js -->
+      </section>
+
+      <!-- Page: Journal & Mood -->
+      <section id="page-journal" class="app-page">
+        <!-- Rendered by journal.js -->
+      </section>
+
+      <!-- Page: AI Companion -->
+      <section id="page-companion" class="app-page">
+        <!-- Rendered by companion.js -->
+      </section>
+
+      <!-- Page: Mindfulness -->
+      <section id="page-mindfulness" class="app-page">
+        <!-- Rendered by mindfulness.js -->
+      </section>
+
+      <!-- Page: Study Planner -->
+      <section id="page-planner" class="app-page">
+        <!-- Rendered by planner.js -->
+      </section>
+
+      <!-- Page: Settings -->
+      <section id="page-settings" class="app-page">
+        <!-- Rendered by settings.js -->
+      </section>
+      
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+      <a href="#dashboard" class="mobile-nav-link active" data-page="dashboard" id="mob-nav-btn-dashboard">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#journal" class="mobile-nav-link" data-page="journal" id="mob-nav-btn-journal">
+        <i data-lucide="book-open"></i>
+        <span>Journal</span>
+      </a>
+      <a href="#companion" class="mobile-nav-link" data-page="companion" id="mob-nav-btn-companion">
+        <i data-lucide="messages-square"></i>
+        <span>AI Companion</span>
+      </a>
+      <a href="#mindfulness" class="mobile-nav-link" data-page="mindfulness" id="mob-nav-btn-mindfulness">
+        <i data-lucide="wind"></i>
+        <span>Calm</span>
+      </a>
+      <a href="#planner" class="mobile-nav-link" data-page="planner" id="mob-nav-btn-planner">
+        <i data-lucide="calendar-check"></i>
+        <span>Plan</span>
+      </a>
+      <a href="#settings" class="mobile-nav-link" data-page="settings" id="mob-nav-btn-settings">
+        <i data-lucide="settings"></i>
+        <span>Setup</span>
+      </a>
+    </nav>
+    
+  </div>
+
+  <!-- Component & Logic Scripts -->
+  <script src="data.js"></script>
+  <script src="gemini.js"></script>
+  <script src="components/journal.js"></script>
+  <script src="components/dashboard.js"></script>
+  <script src="components/companion.js"></script>
+  <script src="components/mindfulness.js"></script>
+  <script src="components/planner.js"></script>
+  <script src="components/settings.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
