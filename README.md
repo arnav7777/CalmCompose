@@ -63,28 +63,6 @@ Built with a warm, distraction-free interface, CalmCompose combines journaling, 
 
 ---
 
-## 🖼️ Screenshots
-
-### Dashboard
-
-![Dashboard Screenshot](screenshots/dashboard.png)
-
-### Journal
-
-![Journal Screenshot](screenshots/journal.png)
-
-### AI Companion
-
-![AI Companion Screenshot](screenshots/companion.png)
-
-### Mindfulness Hub
-
-![Mindfulness Screenshot](screenshots/mindfulness.png)
-
-> Add screenshots inside a `/screenshots` folder after uploading them.
-
----
-
 ## 🏗️ Tech Stack
 
 ### Frontend
